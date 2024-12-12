@@ -1,94 +1,109 @@
-/* Estilo general */
+/* Configuración del estilo global del body */
 body {
-  background-color: #f4f4f4;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background: linear-gradient(to bottom, #2c3e50, #34495e); /* Fondo con degradado vertical */
+  font-family: 'Poppins', sans-serif; /* Fuente principal */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin relleno */
+  display: flex; /* Habilitar modelo flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
 }
 
+/* Configuración de los botones en la barra lateral */
+.sidebar .btn {
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes más redondeados */
+  box-shadow: 0 8px 20px rgba(244, 42, 42, 0.3); /* Sombra más pronunciada */
+  width: 120%; /* Ocupa todo el ancho disponible */
+  max-width: 400px; /* Limitar ancho máximo */
+  text-align: center; /* Centrar contenido dentro del formulario */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque más fuerte */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Efecto hover para los botones en la barra lateral */
+.sidebar .btn:hover {
+  background: rgba(255, 255, 255, 0.2); /* Fondo ligeramente blanco al pasar el ratón */
+  transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+}
+
+/* Configuración del contenedor del formulario de login */
 .login-container {
-  width: 100%;
-  max-width: 400px;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes más redondeados */
+  box-shadow: 0 8px 20px rgba(244, 42, 42, 0.3); /* Sombra más pronunciada */
+  width: 120%; /* Ocupa todo el ancho disponible */
+  max-width: 400px; /* Limitar ancho máximo */
+  text-align: center; /* Centrar contenido dentro del formulario */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque más fuerte */
+  color: #ffffff; /* Texto blanco */
 }
 
+/* Estilo del logo en el formulario */
+.login-logo {
+  width: 80px; /* Tamaño del logo */
+  margin: 0 auto 20px; /* Centrado y margen inferior */
+}
+
+/* Estilo del título del formulario */
 .login-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333333;
+  font-size: 1.8rem; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 20px; /* Separación inferior */
+  color: #000000; /* Color del texto */
 }
 
+/* Configuración de los grupos del formulario */
 .login-form .form-group {
-  margin-bottom: 20px;
-  text-align: left;
+  margin-bottom: 20px; /* Separación entre grupos */
+  text-align: left; /* Alineación del texto a la izquierda */
 }
 
+/* Estilo de las etiquetas de los campos */
 .login-form .form-group label {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #333333;
+  display: block; /* Alineación en bloque */
+  font-size: 1rem; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 8px; /* Separación inferior */
+  color: #000000; /* Color del texto */
 }
 
+/* Configuración de los campos del formulario USUARIO Y CONTRASEÑA */
 .login-form .form-control {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de la fuente */
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  border-radius: 6px; /* Bordes redondeados */
 }
 
+/* Efecto al enfocar los campos del formulario */
 .login-form .form-control:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none;
+  border-color: #000000; /* Color azul del borde */
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  outline: none; /* Sin contorno adicional */
 }
 
+/* Estilo base para los botones */
 .btn {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  color: #ffffff;
-  border: none;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */                                            
+  font-size: 1rem; /* Tamaño de la fuente */                                              /* Barra USUARIOS */
+  border-radius: 6px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor a mano al pasar */
+  transition: background-color 0.3s, transform 0.2s; /* Efectos de transición */
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 576px) {
   .login-container {
-    padding: 20px;
+    padding: 20px; /* Relleno reducido */
   }
 
   .login-title {
-    font-size: 1.3rem;
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
   }
 }
