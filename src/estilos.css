@@ -1,35 +1,174 @@
-/* Configuración del estilo global del body */
+/* Estilo general para el cuerpo de la página */
 body {
-  background: linear-gradient(to bottom, #2c3e50, #34495e); /* Fondo con degradado vertical */
-  font-family: 'Poppins', sans-serif; /* Fuente principal */
-  margin: 0; /* Sin margen */
-  padding: 0; /* Sin relleno */
-  display: flex; /* Habilitar modelo flexbox */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
+  font-family: cursive; /* Fuente principal de la página */
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina relleno */
+  color: #000000; /* Color de texto principal */
+  background-image: url('fondo-login.jpg'); /* Imagen de fondo */
+  background-size: cover; /* Escalar la imagen para que cubra todo el fondo */
+  background-repeat: no-repeat; /* Evitar que la imagen se repita */
+  background-attachment: fixed; /* Fijar la imagen de fondo para que no se desplace */
+  background-position: center; /* Centrar la imagen de fondo */
+  display: flex; /* Usar un modelo de caja flexible */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center; /* Centrar el contenido verticalmente */
+  height: 100vh; /* Asegurar que el cuerpo ocupe el 100% de la altura de la ventana */
+  overflow: hidden; /* Evitar que aparezcan barras de desplazamiento */
+}
+
+/* Estilo para la barra lateral (sidebar) */
+.dashboard-sideBar {
+  position: fixed; /* Fijar la barra lateral en la pantalla */
+  top: 0; /* Iniciar desde la parte superior */
+  left: 0; /* Alinear al lado izquierdo */
+  width: 250px; /* Ancho de la barra lateral */
   height: 100vh; /* Ocupa toda la altura de la ventana */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 200, 150, 0.3)
+  ); /* Degradado similar al formulario */
+  color: #000; /* Texto oscuro */
+  z-index: 10; /* Colocar la barra sobre otros elementos */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px 0 0 10px; /* Bordes redondeados en el lado derecho */
+  backdrop-filter: blur(10px); /* Añadir desenfoque para un efecto elegante */
 }
 
-/* Configuración de los botones en la barra lateral */
-.sidebar .btn {
-  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
-  padding: 30px; /* Espaciado interno */
-  border-radius: 15px; /* Bordes más redondeados */
-  box-shadow: 0 8px 20px rgba(244, 42, 42, 0.3); /* Sombra más pronunciada */
-  width: 120%; /* Ocupa todo el ancho disponible */
-  max-width: 400px; /* Limitar ancho máximo */
-  text-align: center; /* Centrar contenido dentro del formulario */
-  backdrop-filter: blur(10px); /* Efecto de desenfoque más fuerte */
+/* Estilo para los enlaces o elementos del menú dentro de la barra */
+.dashboard-sideBar a {
+  display: block;
+  margin: 15px 0; /* Espaciado entre elementos */
+  color: #444; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 1rem; /* Tamaño del texto */
+  font-family: 'Arial', sans-serif; /* Fuente */
+}
+
+.dashboard-sideBar a:hover {
+  color: #ff4500; /* Color al pasar el mouse */
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+}
+
+
+
+.dashboard-sideBar-title {
+  text-align: center; /* Centrar el título */
+  font-size: 18px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 20px; /* Separación del título con otros elementos */
+}
+
+.dashboard-sideBar-Menu {
+  list-style: none; /* Eliminar estilo de lista */
+  padding: 0; /* Eliminar relleno */
+  margin: 0; /* Eliminar margen */
+}
+
+.dashboard-sideBar-Menu li {
+  margin: 15px 0; /* Separación entre los elementos de la lista */
+}
+
+.dashboard-sideBar-Menu a {
+  color: #ffa600; /* Color de los enlaces */
+  text-decoration: none; /* Eliminar subrayado */
+  padding: 8px 16px; /* Espaciado interno del enlace */
+  display: block; /* Hacer que el enlace sea un bloque */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Efecto suave al cambiar el color */
+}
+
+.dashboard-sideBar-Menu a:hover {
+  background-color: #555555; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para el contenido principal */
+.dashboard-contentPage {
+  margin-left: 150px; /* Separar el contenido de la barra lateral */
+  padding: 20px; /* Espaciado interno */
+  min-height: 80vh; /* Altura mínima del contenido */
+  max-width: 1200px; /* Ancho máximo del contenido */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  color: #ffffff; /* Color de texto principal */
+  display: flex; /* Usar un modelo de caja flexible */
+  flex-direction: column; /* Disposición vertical de los elementos */
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: flex-start; /* Alinear el contenido hacia el inicio */
+}
+
+h2 {
+  text-align: center; /* Centrar títulos */
+  margin-top: 20px; /* Separar del contenido superior */
+  color: #ff0000; /* Color del texto */
+}
+
+/* Estilo para contenedor de la tabla */
+.table-container {
+  max-height: 300px; /* Altura máxima del contenedor */
+  overflow-y: auto; /* Activar barra de desplazamiento vertical si es necesario */
+  width: 90%; /* Ajustar el ancho al 90% del contenedor */
+  margin-top: 20px; /* Separación del contenido superior */
+}
+
+table {
+  width: 100%; /* Ancho completo de la tabla */
+  table-layout: fixed; /* Distribuir las columnas equitativamente */
+  border-collapse: collapse; /* Eliminar espacios entre las celdas */
+}
+
+th, td {
+  padding: 10px; /* Espaciado interno de las celdas */
+  text-align: center; /* Centrar contenido de las celdas */
+}
+
+th {
+  background-color: #ffffff; /* Fondo de los encabezados */
+  color: white; /* Color del texto de los encabezados */
+}
+
+td {
+  background-color: #f2f2f2; /* Fondo de las celdas */
+}
+
+td button {
+  width: 100%; /* Botón ocupa todo el ancho de la celda */
+  padding: 8px; /* Espaciado interno */
+  cursor: pointer; /* Mostrar cursor de mano */
+}
+
+.user-button.active {
+  background: linear-gradient(45deg, #cdd626, #f30404); /* Cambiar dirección del gradiente */
   color: #ffffff; /* Texto blanco */
+  border: none; /* Sin bordes */
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 15px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Mostrar cursor de mano */
+  transition: background 0.3s; /* Efecto de transición en el fondo */
 }
 
-/* Efecto hover para los botones en la barra lateral */
-.sidebar .btn:hover {
-  background: rgba(255, 255, 255, 0.2); /* Fondo ligeramente blanco al pasar el ratón */
-  transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+.user-button:not(.active):hover {
+  background-color: #e18122; /* Fondo gris claro al pasar el ratón */
+  color: #000000; /* Texto azul */
 }
 
-/* Configuración del contenedor del formulario de login */
+.user-button:focus {
+  outline: none; /* Eliminar contorno al enfocar */
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .dashboard-sideBar {
+    width: 180px; /* Reducir el ancho de la barra lateral */
+  }
+
+  .dashboard-contentPage {
+    margin-left: 180px; /* Ajustar el margen izquierdo del contenido */
+  }
+}
+
+/* Estilo del formulario de login */
 .login-container {
   background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
   padding: 30px; /* Espaciado interno */
@@ -42,68 +181,73 @@ body {
   color: #ffffff; /* Texto blanco */
 }
 
-/* Estilo del logo en el formulario */
-.login-logo {
-  width: 80px; /* Tamaño del logo */
-  margin: 0 auto 20px; /* Centrado y margen inferior */
-}
-
-/* Estilo del título del formulario */
-.login-title {
-  font-size: 1.8rem; /* Tamaño de la fuente */
-  font-weight: bold; /* Texto en negrita */
+/* Estilo del título */
+.login-container h1 {
+  font-size: 24px; /* Tamaño del título */
   margin-bottom: 20px; /* Separación inferior */
-  color: #000000; /* Color del texto */
+  font-weight: bold; /* Negrita */
 }
 
-/* Configuración de los grupos del formulario */
-.login-form .form-group {
-  margin-bottom: 20px; /* Separación entre grupos */
-  text-align: left; /* Alineación del texto a la izquierda */
-}
-
-/* Estilo de las etiquetas de los campos */
-.login-form .form-group label {
-  display: block; /* Alineación en bloque */
-  font-size: 1rem; /* Tamaño de la fuente */
-  font-weight: bold; /* Texto en negrita */
-  margin-bottom: 8px; /* Separación inferior */
-  color: #000000; /* Color del texto */
-}
-
-/* Configuración de los campos del formulario USUARIO Y CONTRASEÑA */
-.login-form .form-control {
+/* Estilo de los campos del formulario */
+.login-container input {
   width: 100%; /* Ancho completo */
   padding: 12px; /* Espaciado interno */
-  font-size: 1rem; /* Tamaño de la fuente */
-  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
-  border-radius: 6px; /* Bordes redondeados */
+  margin: 15px 0; /* Separación entre campos */
+  border: none; /* Sin bordes */
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+  color: #ffffff; /* Texto blanco */
+  outline: none; /* Sin bordes al enfocar */
+  text-align: center; /* Texto centrado */
 }
 
-/* Efecto al enfocar los campos del formulario */
-.login-form .form-control:focus {
-  border-color: #000000; /* Color azul del borde */
-  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
-  outline: none; /* Sin contorno adicional */
+.login-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder semitransparente */
 }
 
-/* Estilo base para los botones */
-.btn {
+/* Estilo del botón de login */
+.login-container button {
   width: 100%; /* Ancho completo */
-  padding: 12px; /* Espaciado interno */                                            
-  font-size: 1rem; /* Tamaño de la fuente */                                              /* Barra USUARIOS */
-  border-radius: 6px; /* Bordes redondeados */
-  cursor: pointer; /* Cambiar cursor a mano al pasar */
-  transition: background-color 0.3s, transform 0.2s; /* Efectos de transición */
+  padding: 12px; /* Espaciado interno */
+  background: linear-gradient(45deg, #f30404, #cdd626); /* Gradiente en el botón */
+  color: #ffffff; /* Texto blanco */
+  border: none; /* Sin bordes */
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Mostrar cursor de mano */
+  transition: background 0.3s; /* Efecto de transición en el fondo */
 }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 576px) {
-  .login-container {
-    padding: 20px; /* Relleno reducido */
-  }
+.login-container button:hover {
+  background: linear-gradient(45deg, #cdd626, #f30404); /* Cambiar dirección del gradiente */
+}
 
-  .login-title {
-    font-size: 1.5rem; /* Tamaño de fuente reducido */
-  }
+/* Estilo del texto adicional */
+.login-container a {
+  color: rgba(255, 255, 255, 0.8); /* Texto semitransparente */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 14px; /* Tamaño de texto */
+  margin-top: 15px; /* Separación superior */
+  display: inline-block; /* Alineación como bloque */
+}
+
+.login-container a:hover {
+  color: #832323; /* Texto completamente blanco al pasar el ratón */
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Ajustes para el checkbox y texto asociado */
+.login-container .remember-me {
+  display: flex; /* Disposición en fila */
+  align-items: center; /* Alinear verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  margin: 10px 0; /* Margen superior e inferior */
+  font-size: 14px; /* Tamaño del texto */
+  color: rgba(255, 255, 255, 0.8); /* Texto semitransparente */
+}
+
+.login-container .remember-me input {
+  margin-right: 8px; /* Separación con el texto */
 }
