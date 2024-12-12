@@ -1,154 +1,109 @@
-/* General body styles */
+/* Configuración del estilo global del body */
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #000000; /* Color de texto principal */
-  background-image: url('fondo-login.jpg'); /* Ruta de la imagen de fondo */
-  background-size: cover; /* Escalar la imagen para cubrir todo el fondo */
-  background-repeat: no-repeat; /* No repetir la imagen */
-  background-attachment: fixed; /* Fijar la imagen para que no se mueva */
-  background-position: center; /* Centrar la imagen */
-  display: flex;
+  background: linear-gradient(to bottom, #2c3e50, #34495e); /* Fondo con degradado vertical */
+  font-family: 'Poppins', sans-serif; /* Fuente principal */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin relleno */
+  display: flex; /* Habilitar modelo flexbox */
   justify-content: center; /* Centrar horizontalmente */
   align-items: center; /* Centrar verticalmente */
-  height: 100vh; /* Asegura que cubra toda la ventana */
-  overflow: hidden; /* Evita que aparezca barra de desplazamiento */
-}
-
-/* Sidebar styles */
-.dashboard-sideBar {
-  position: fixed; /* Fijar el menú al lado izquierdo */
-  top: 0;
-  left: 0;
-  width: 200px; /* Reducir ancho del menú */
   height: 100vh; /* Ocupa toda la altura de la ventana */
-  background-color: #000000; /* Fondo negro */
-  color: #fff; /* Texto blanco */
-  z-index: 10; /* Siempre encima del fondo */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Sombra para destacar el menú */
-  padding: 20px 0;
 }
 
-.dashboard-sideBar-title {
-  text-align: center;
-  font-size: 18px; /* Reducir tamaño de texto */
-  font-weight: bold;
-  margin-bottom: 20px;
+/* Configuración de los botones en la barra lateral */
+.sidebar .btn {
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes más redondeados */
+  box-shadow: 0 8px 20px rgba(244, 42, 42, 0.3); /* Sombra más pronunciada */
+  width: 120%; /* Ocupa todo el ancho disponible */
+  max-width: 400px; /* Limitar ancho máximo */
+  text-align: center; /* Centrar contenido dentro del formulario */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque más fuerte */
+  color: #ffffff; /* Texto blanco */
 }
 
-.dashboard-sideBar-Menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Efecto hover para los botones en la barra lateral */
+.sidebar .btn:hover {
+  background: rgba(255, 255, 255, 0.2); /* Fondo ligeramente blanco al pasar el ratón */
+  transform: scale(1.05); /* Efecto de escala al pasar el ratón */
 }
 
-.dashboard-sideBar-Menu li {
-  margin: 15px 0;
+/* Configuración del contenedor del formulario de login */
+.login-container {
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes más redondeados */
+  box-shadow: 0 8px 20px rgba(244, 42, 42, 0.3); /* Sombra más pronunciada */
+  width: 120%; /* Ocupa todo el ancho disponible */
+  max-width: 400px; /* Limitar ancho máximo */
+  text-align: center; /* Centrar contenido dentro del formulario */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque más fuerte */
+  color: #ffffff; /* Texto blanco */
 }
 
-.dashboard-sideBar-Menu a {
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 16px;
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+/* Estilo del logo en el formulario */
+.login-logo {
+  width: 80px; /* Tamaño del logo */
+  margin: 0 auto 20px; /* Centrado y margen inferior */
 }
 
-.dashboard-sideBar-Menu a:hover {
-  background-color: #555555; /* Color al pasar el ratón */
+/* Estilo del título del formulario */
+.login-title {
+  font-size: 1.8rem; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 20px; /* Separación inferior */
+  color: #000000; /* Color del texto */
 }
 
-/* Main content styles */
-.dashboard-contentPage {
-  margin-left: 150px; /* Ajustar el margen izquierdo del contenido, moviéndolo más a la izquierda */
-  padding: 20px;
-  min-height: 80vh; /* Asegura que el contenido ocupe al menos el 80% de la altura */
-  max-width: 1200px; /* Limitar el ancho máximo del contenido */
-  width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible */
-  color: #ffffff; /* Color del texto principal */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra los elementos horizontalmente */
-  justify-content: flex-start; /* Asegura que el contenido no se estire */
+/* Configuración de los grupos del formulario */
+.login-form .form-group {
+  margin-bottom: 20px; /* Separación entre grupos */
+  text-align: left; /* Alineación del texto a la izquierda */
 }
 
-/* Ajustes generales para el contenido */
-h2 {
-  text-align: center;
-  margin-top: 20px;
-  color: #ffffff;
+/* Estilo de las etiquetas de los campos */
+.login-form .form-group label {
+  display: block; /* Alineación en bloque */
+  font-size: 1rem; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 8px; /* Separación inferior */
+  color: #000000; /* Color del texto */
 }
 
-/* Estilo para la tabla y scrollbar */
-.table-container {
-  max-height: 300px; /* Ajusta el tamaño de la tabla */
-  overflow-y: auto;  /* Aparecerá un scrollbar vertical cuando sea necesario */
-  width: 90%; /* Ajusta el tamaño para que no ocupe toda la pantalla */
-  margin-top: 20px;
+/* Configuración de los campos del formulario USUARIO Y CONTRASEÑA */
+.login-form .form-control {
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de la fuente */
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  border-radius: 6px; /* Bordes redondeados */
 }
 
-table {
-  width: 100%;
-  table-layout: fixed; /* Asegura que la tabla se ajuste al tamaño */
-  border-collapse: collapse;
+/* Efecto al enfocar los campos del formulario */
+.login-form .form-control:focus {
+  border-color: #000000; /* Color azul del borde */
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  outline: none; /* Sin contorno adicional */
 }
 
-th, td {
-  padding: 10px;
-  text-align: center;
+/* Estilo base para los botones */
+.btn {
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */                                            
+  font-size: 1rem; /* Tamaño de la fuente */                                              /* Barra USUARIOS */
+  border-radius: 6px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor a mano al pasar */
+  transition: background-color 0.3s, transform 0.2s; /* Efectos de transición */
 }
 
-th {
-  background-color: #4CAF50;
-  color: white;
-}
-
-td {
-  background-color: #f2f2f2;
-}
-
-td button {
-  width: 100%;
-  padding: 8px;
-  cursor: pointer;
-}
-
-/* Estilos de los botones de usuarios */
-.user-button {
-  margin: 5px;
-  padding: 8px 16px;
-  border: 1px solid #007bff;
-  background-color: white;
-  color: #007bff;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.user-button.active {
-  background-color: #007bff;
-  color: white;
-}
-
-.user-button:not(.active):hover {
-  background-color: #f0f0f0;
-  color: #007bff;
-}
-
-.user-button:focus {
-  outline: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .dashboard-sideBar {
-    width: 180px; /* Reducir más el ancho del menú en pantallas pequeñas */
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 576px) {
+  .login-container {
+    padding: 20px; /* Relleno reducido */
   }
 
-  .dashboard-contentPage {
-    margin-left: 180px; /* Ajustar el margen izquierdo del contenido */
+  .login-title {
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
   }
 }
